@@ -1,0 +1,24 @@
+{
+  "name": "classroom-computer-login",
+  "version": "1.0.0",
+  "description": "Child-friendly classroom computer sign-in app",
+  "main": "main.js",
+  "author": "Ban Nong Phai Yai School",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "th.school.bannongphaiyai.computerlogin",
+    "productName": "ลงชื่อเข้าใช้ห้องคอมพิวเตอร์",
+    "directories": { "output": "dist" },
+    "files": ["index.html", "main.js", "preload.js", "config.js", "README.md"],
+    "win": { "target": ["nsis"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true }
+  }
+}
